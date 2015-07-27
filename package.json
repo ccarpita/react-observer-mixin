@@ -8,10 +8,11 @@
   },
   "main": "src/react-observer-mixin.js",
   "scripts": {
-    "test": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/*"
+    "test": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/* && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "devDependencies": {
     "chai": "^3.2.0",
+    "coveralls": "^2.11.3",
     "eslint": "^0.24.1",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
