@@ -9,7 +9,7 @@
   "main": "src/react-observer-mixin.js",
   "scripts": {
     "test": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/*",
-    "test-and-publish": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/* && cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js"
+    "test-and-publish": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/* && cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js"
   },
   "devDependencies": {
     "chai": "^3.2.0",
