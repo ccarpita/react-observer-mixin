@@ -1,5 +1,4 @@
-# React Observer Mixin  [![Build Status](https://travis-ci.org/ccarpita/react-observer-mixin.svg?branch=master)](https://travis-ci.org/ccarpita/react-observer-mixin) [![codecov.io](http://codecov.io/github/ccarpita/react-observer-mixin/coverage.svg?branch=master)](http://codecov.io/github/ccarpita/react-observer-mixin?branch=master)
- [![Dependency Status](https://gemnasium.com/ccarpita/react-observer-mixin.svg)](https://gemnasium.com/ccarpita/react-observer-mixin)
+# React Observer Mixin  [![Build Status](https://travis-ci.org/ccarpita/react-observer-mixin.svg?branch=master)](https://travis-ci.org/ccarpita/react-observer-mixin) [![codecov.io](http://codecov.io/github/ccarpita/react-observer-mixin/coverage.svg?branch=master)](http://codecov.io/github/ccarpita/react-observer-mixin?branch=master) [![Dependency Status](https://gemnasium.com/ccarpita/react-observer-mixin.svg)](https://gemnasium.com/ccarpita/react-observer-mixin)
 
 A [React.js] Mixin with ES5 and ES6-compatible semantics which provides
 managed event listeners that respect component lifecycles, as well as
