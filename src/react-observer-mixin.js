@@ -1,4 +1,4 @@
-(function(module) {
+(function() {
 
   'use strict';
 
@@ -139,4 +139,4 @@
   }
 
   module.exports = attachMixin;
-}(typeof module !== 'undefined' ? module : {}));
+}());

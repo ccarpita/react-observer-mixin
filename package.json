@@ -1,18 +1,19 @@
 {
   "name": "react-observer-mixin",
   "version": "0.0.1",
-  "description": "A React.js Mixin with ES5 and ES6-compatible semantics which provides managed event listeners that respect component lifecycles, as well as state setters which are compatible with React invariants and are suitable for use in one-time event handlers.",
+  "description": "A React.js Mixin with ES5 and ES6-compatible semantics which provides managed event listeners that respect component lifecycles, as well as a state setter which respects React invariants and is suitable for one-time event handlers.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ccarpita/react-observer-mixin"
   },
   "main": "src/react-observer-mixin.js",
   "scripts": {
-    "test": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/* && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "test": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/*",
+    "test-and-publish": "eslint --config eslint.json src/* test/* && istanbul cover node_modules/.bin/_mocha -- -R spec test/unit/* && cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js"
   },
   "devDependencies": {
     "chai": "^3.2.0",
-    "coveralls": "^2.11.3",
+    "codecov.io": "^0.1.5",
     "eslint": "^0.24.1",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
