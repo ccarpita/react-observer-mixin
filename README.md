@@ -5,7 +5,7 @@ managed event listeners that respect component lifecycles, as well as
 state setters which are compatible with React invariants and are suitable
 for use in one-time event handlers.
 
-This module has no runtime dependencies and weighs <4kb when minified.
+This module has no runtime dependencies and weighs in at ~1.3kB minified.
 
 # Why does this exist?
 
