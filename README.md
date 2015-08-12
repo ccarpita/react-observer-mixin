@@ -74,33 +74,32 @@ var MyComponent = React.createClass({
 
 | Term | Definition |
 | ---- | ---------- |
-| Mixin | Refers to this module's Mixin returned by the `build` function |
-| Observable | Object providing `on` or `addEventListener` methods |
+| Mixin | Refers to this module's Mixin object. |
+| Observable | Object providing `on` or `addEventListener` methods.  Examples include extended `Event.Emitter` objects and DOM nodes. |
 
 # API
 
 ## Module
 
-### (Mixin) module.build
+#### `module.Mixin`
 
-Generate a Mixin which can be provided to the list of mixins for a
-React component.
+A React [Mixin](https://facebook.github.io/react/docs/reusable-components.html#mixins) class which can be provided to the list of Mixins for a component.
 
-See above for example usage.
+#### `module(React.Component)`
 
-### module.mixin(React.Component)
-
-Attach Mixin methods to an React.Component built in an ES6 fashion.
+Attach Mixin methods to a React.Component in the ES6 constructor function.
 
 
 ## Provided Mixin Methods
 
-### this.listenTo(Observable, StringOrObject, [Function])
+#### `this.listenTo(Observable, StringOrObject, [Function])`
 
 Attaches one or more managed listeners to an observable object.  The event
-listeners will be detached when the component is un-mounted, and re-attached
-if/when the component is mounted again.
+listeners will be automatically detached when the component is un-mounted,
+ensuring:
 
+1) The user won't continue to attempt to update component state
+2) VM garbage collection can clean up the component, as well as the observable once all listeners have detached.
 
 Example:
 ```js
@@ -123,16 +122,15 @@ Example:
   }
 ```
 
-### this.setStateIfMounted(Object)
+#### `this.setStateIfMounted(Object)`
 
 Sets state if and only if the component is currently mounted.  If the component
 is un-mounted, this call will be ignored and any given state will be silently
 dropped.
 
-
 # Contributors
 
-Accounts with accepted PRs will be added to this list.
+Users with accepted PRs will be added to this list.
 
 * Chris Carpita
 
